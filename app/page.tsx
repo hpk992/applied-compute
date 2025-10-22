@@ -35,7 +35,7 @@ export default function Home() {
       </div>
       <header>
         <Image
-          className="bg-background mt-16 w-full px-4"
+          className="bg-background mt-16 w-full px-4 sm:hidden"
           src="/logo-Applied-Compute.png"
           alt="Applied Compute Logo"
           width={300}
@@ -54,7 +54,7 @@ export default function Home() {
             type="primary"
             icon="default"
             text="Join us"
-            className="w-full"
+            className="w-full sm:hidden"
             removeBorders={['top']}
           />
           <Button
@@ -62,11 +62,11 @@ export default function Home() {
             icon="default"
             text="Get in touch"
             removeBorders={['left', 'top']}
-            className="w-full"
+            className="w-full sm:hidden"
           />
         </div>
       </header>
-      <main className="flex flex-row pt-24 pr-[135px] pb-[112px] max-[1228px]:pr-4 max-[1228px]:pl-4">
+      <main className="flex flex-row pt-24 pr-[135px] pb-[112px] max-[1228px]:pr-4 max-[1228px]:pl-4 min-[1800]:pr-[20vw]">
         <aside className="relative w-full max-sm:hidden">
           <Image
             className="bg-background fixed bottom-[17.5px] left-[17.5px]"
