@@ -1,26 +1,124 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+/* Suisse Works Font Family */
+@font-face {
+  font-family: 'Suisse Works';
+  src:
+    url('/font/Suisse Works pack/web files/SuisseWorks-Regular-WebS.woff2') format('woff2'),
+    url('/font/Suisse Works pack/web files/SuisseWorks-Regular-WebS.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Works';
+  src:
+    url('/font/Suisse Works pack/web files/SuisseWorks-RegularItalic-WebS.woff2') format('woff2'),
+    url('/font/Suisse Works pack/web files/SuisseWorks-RegularItalic-WebS.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Works';
+  src:
+    url('/font/Suisse Works pack/web files/SuisseWorks-Medium-WebS.woff2') format('woff2'),
+    url('/font/Suisse Works pack/web files/SuisseWorks-Medium-WebS.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Works';
+  src:
+    url('/font/Suisse Works pack/web files/SuisseWorks-MediumItalic-WebS.woff2') format('woff2'),
+    url('/font/Suisse Works pack/web files/SuisseWorks-MediumItalic-WebS.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Works';
+  src:
+    url('/font/Suisse Works pack/web files/SuisseWorks-Bold-WebS.woff2') format('woff2'),
+    url('/font/Suisse Works pack/web files/SuisseWorks-Bold-WebS.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Works';
+  src:
+    url('/font/Suisse Works pack/web files/SuisseWorks-BoldItalic-WebS.woff2') format('woff2'),
+    url('/font/Suisse Works pack/web files/SuisseWorks-BoldItalic-WebS.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Suisse Intl Mono Font Family */
+@font-face {
+  font-family: 'Suisse Intl Mono';
+  src:
+    url("/font/Suisse Int'l Mono pack/web files/SuisseIntlMono-Thin-WebS.woff2") format('woff2'),
+    url("/font/Suisse Int'l Mono pack/web files/SuisseIntlMono-Thin-WebS.woff") format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Intl Mono';
+  src:
+    url("/font/Suisse Int'l Mono pack/web files/SuisseIntlMono-Regular-WebS.woff2") format('woff2'),
+    url("/font/Suisse Int'l Mono pack/web files/SuisseIntlMono-Regular-WebS.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Intl Mono';
+  src:
+    url("/font/Suisse Int'l Mono pack/web files/SuisseIntlMono-Bold-WebS.woff2") format('woff2'),
+    url("/font/Suisse Int'l Mono pack/web files/SuisseIntlMono-Bold-WebS.woff") format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
+  /* Custom Colors */
+  --primary: #f04a00;
   --background: #ffffff;
-  --foreground: #171717;
+  --background-main: #ffffff;
+  --background-100: #e7e5e4;
+  --foreground: #1c1917;
+  --foreground-main: #1c1917;
+  --foreground-100: #292524;
+  --foreground-200: #a8a29e;
 }
 
-@theme inline {
+@theme {
+  --color-primary: var(--primary);
   --color-background: var(--background);
+  --color-background-main: var(--background-main);
+  --color-background-100: var(--background-100);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-foreground-main: var(--foreground-main);
+  --color-foreground-100: var(--foreground-100);
+  --color-foreground-200: var(--foreground-200);
+  --font-main: 'Suisse Works';
+  --font-100: 'Suisse Intl Mono';
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Suisse Works', sans-serif;
 }
