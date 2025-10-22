@@ -4,8 +4,8 @@
 @font-face {
   font-family: 'Suisse Works';
   src:
-    url('/font/Suisse Works pack/web files/SuisseWorks-Regular-WebS.woff2') format('woff2'),
-    url('/font/Suisse Works pack/web files/SuisseWorks-Regular-WebS.woff') format('woff');
+    url('/font/Suisse-Works/SuisseWorks-Regular-WebXL.woff2') format('woff2'),
+    url('/font/Suisse-Works/SuisseWorks-Regular-WebXL.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -14,8 +14,8 @@
 @font-face {
   font-family: 'Suisse Works';
   src:
-    url('/font/Suisse Works pack/web files/SuisseWorks-RegularItalic-WebS.woff2') format('woff2'),
-    url('/font/Suisse Works pack/web files/SuisseWorks-RegularItalic-WebS.woff') format('woff');
+    url('/font/Suisse-Works/SuisseWorks-RegularItalic-WebXL.woff2') format('woff2'),
+    url('/font/Suisse-Works/SuisseWorks-RegularItalic-WebXL.woff') format('woff');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -24,8 +24,8 @@
 @font-face {
   font-family: 'Suisse Works';
   src:
-    url('/font/Suisse Works pack/web files/SuisseWorks-Medium-WebS.woff2') format('woff2'),
-    url('/font/Suisse Works pack/web files/SuisseWorks-Medium-WebS.woff') format('woff');
+    url('/font/Suisse-Works/SuisseWorks-Medium-WebXL.woff2') format('woff2'),
+    url('/font/Suisse-Works/SuisseWorks-Medium-WebXL.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -34,8 +34,8 @@
 @font-face {
   font-family: 'Suisse Works';
   src:
-    url('/font/Suisse Works pack/web files/SuisseWorks-MediumItalic-WebS.woff2') format('woff2'),
-    url('/font/Suisse Works pack/web files/SuisseWorks-MediumItalic-WebS.woff') format('woff');
+    url('/font/Suisse-Works/SuisseWorks-MediumItalic-WebXL.woff2') format('woff2'),
+    url('/font/Suisse-Works/SuisseWorks-MediumItalic-WebXL.woff') format('woff');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -44,8 +44,8 @@
 @font-face {
   font-family: 'Suisse Works';
   src:
-    url('/font/Suisse Works pack/web files/SuisseWorks-Bold-WebS.woff2') format('woff2'),
-    url('/font/Suisse Works pack/web files/SuisseWorks-Bold-WebS.woff') format('woff');
+    url('/font/Suisse-Works/SuisseWorks-Bold-WebXL.woff2') format('woff2'),
+    url('/font/Suisse-Works/SuisseWorks-Bold-WebXL.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -54,8 +54,8 @@
 @font-face {
   font-family: 'Suisse Works';
   src:
-    url('/font/Suisse Works pack/web files/SuisseWorks-BoldItalic-WebS.woff2') format('woff2'),
-    url('/font/Suisse Works pack/web files/SuisseWorks-BoldItalic-WebS.woff') format('woff');
+    url('/font/Suisse-Works/SuisseWorks-BoldItalic-WebXL.woff2') format('woff2'),
+    url('/font/Suisse-Works/SuisseWorks-BoldItalic-WebXL.woff') format('woff');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -65,8 +65,8 @@
 @font-face {
   font-family: 'Suisse Intl Mono';
   src:
-    url("/font/Suisse Int'l Mono pack/web files/SuisseIntlMono-Thin-WebS.woff2") format('woff2'),
-    url("/font/Suisse Int'l Mono pack/web files/SuisseIntlMono-Thin-WebS.woff") format('woff');
+    url('/font/Suisse-Intl-Mono/SuisseIntlMono-Thin-WebXL.woff2') format('woff2'),
+    url('/font/Suisse-Intl-Mono/SuisseIntlMono-Thin-WebXL.woff') format('woff');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -75,8 +75,8 @@
 @font-face {
   font-family: 'Suisse Intl Mono';
   src:
-    url("/font/Suisse Int'l Mono pack/web files/SuisseIntlMono-Regular-WebS.woff2") format('woff2'),
-    url("/font/Suisse Int'l Mono pack/web files/SuisseIntlMono-Regular-WebS.woff") format('woff');
+    url('/font/Suisse-Intl-Mono/SuisseIntlMono-Regular-WebXL.woff2') format('woff2'),
+    url('/font/Suisse-Intl-Mono/SuisseIntlMono-Regular-WebXL.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -85,8 +85,8 @@
 @font-face {
   font-family: 'Suisse Intl Mono';
   src:
-    url("/font/Suisse Int'l Mono pack/web files/SuisseIntlMono-Bold-WebS.woff2") format('woff2'),
-    url("/font/Suisse Int'l Mono pack/web files/SuisseIntlMono-Bold-WebS.woff") format('woff');
+    url('/font/Suisse-Intl-Mono/SuisseIntlMono-Bold-WebXL.woff2') format('woff2'),
+    url('/font/Suisse-Intl-Mono/SuisseIntlMono-Bold-WebXL.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -113,8 +113,8 @@
   --color-foreground-main: var(--foreground-main);
   --color-foreground-100: var(--foreground-100);
   --color-foreground-200: var(--foreground-200);
-  --font-main: 'Suisse Works';
-  --font-100: 'Suisse Intl Mono';
+  --font-suisse-works: 'Suisse Works';
+  --font-suisse-intl: 'Suisse Intl Mono';
 }
 
 body {
