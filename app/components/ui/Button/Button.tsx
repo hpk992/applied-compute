@@ -1,24 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ButtonProps } from './Button.types';
 
-// Icon component (default arrow)
+// Icon component (default rectangle icon)
 const DefaultIcon = () => (
-  <svg
-    className="h-5 w-5"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M13 7l5 5m0 0l-5 5m5-5H6"
-    />
-  </svg>
+  <Image src="/rectangle_icon.svg" alt="" width={20} height={20} className="h-2.5 w-2.5" />
 );
 
 export default function Button({
@@ -46,7 +34,7 @@ export default function Button({
   // Button content
   const content = (
     <>
-      <span className="leading-0 font-bold">{text}</span>
+      <span className="text-[12px] leading-0 font-bold">{text}</span>
       {icon === 'default' && <DefaultIcon />}
     </>
   );
