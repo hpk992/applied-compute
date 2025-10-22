@@ -98,6 +98,7 @@
   --background: #ffffff;
   --background-main: #ffffff;
   --background-100: #e7e5e4;
+  --background-200: #fafaf9;
   --foreground: #1c1917;
   --foreground-main: #1c1917;
   --foreground-100: #292524;
@@ -109,16 +110,17 @@
   --color-background: var(--background);
   --color-background-main: var(--background-main);
   --color-background-100: var(--background-100);
+  --color-background-200: var(--background-200);
   --color-foreground: var(--foreground);
   --color-foreground-main: var(--foreground-main);
   --color-foreground-100: var(--foreground-100);
   --color-foreground-200: var(--foreground-200);
-  --font-suisse-works: 'Suisse Works';
-  --font-suisse-intl: 'Suisse Intl Mono';
+  --font-main: 'Suisse Works';
+  --font-second: 'Suisse Intl Mono';
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Suisse Works', sans-serif;
+  font-family: 'Suisse Works', serif;
 }

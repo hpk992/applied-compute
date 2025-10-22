@@ -1,12 +1,20 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { ButtonProps } from './Button.types';
 
 // Icon component (default rectangle icon)
 const DefaultIcon = () => (
-  <Image src="/rectangle_icon.svg" alt="" width={20} height={20} className="h-2.5 w-2.5" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="10"
+    height="10"
+    viewBox="0 0 10 10"
+    fill="none"
+    className="h-2.5 w-2.5"
+  >
+    <path d="M10 0H0L10 10V0Z" fill="currentColor" />
+  </svg>
 );
 
 export default function Button({
@@ -16,25 +24,33 @@ export default function Button({
   url,
   onClick,
   className = '',
+  removeBorders = [],
 }: ButtonProps) {
   // Base styles - matching your CSS requirements
   const baseStyles =
-    'font-main flex px-3 py-3 justify-center items-center gap-2.5 font-medium transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 border-[2px]';
+    'font-main flex px-3 py-3 justify-between items-center gap-2.5 font-medium transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer';
+
+  // Build border classes based on removeBorders
+  const borderClasses = [];
+  if (!removeBorders.includes('top')) borderClasses.push('border-t-[2px]');
+  if (!removeBorders.includes('right')) borderClasses.push('border-r-[2px]');
+  if (!removeBorders.includes('bottom')) borderClasses.push('border-b-[2px]');
+  if (!removeBorders.includes('left')) borderClasses.push('border-l-[2px]');
 
   // Type-specific styles
   const typeStyles = {
     primary: 'bg-background text-primary border-primary hover:opacity-90 focus:ring-primary',
     inverted:
-      'bg-background text-primary border-primary hover:bg-primary hover:text-background focus:ring-primary',
+      'bg-primary text-background border-primary hover:bg-primary hover:text-background focus:ring-primary',
   };
 
   // Combine styles
-  const buttonStyles = `${baseStyles} ${typeStyles[type]} ${className}`;
+  const buttonStyles = `${baseStyles} ${borderClasses.join(' ')} ${typeStyles[type]} ${className}`;
 
   // Button content
   const content = (
     <>
-      <span className="text-[12px] leading-0 font-bold">{text}</span>
+      <span className="font-second text-[12px] leading-0 font-bold">{text}</span>
       {icon === 'default' && <DefaultIcon />}
     </>
   );

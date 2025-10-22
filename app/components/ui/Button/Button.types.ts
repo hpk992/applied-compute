@@ -1,5 +1,6 @@
 export type ButtonType = 'primary' | 'inverted';
 export type ButtonIcon = 'default' | 'none';
+export type BorderSide = 'top' | 'right' | 'bottom' | 'left';
 
 export interface ButtonProps {
   type?: ButtonType;
@@ -8,4 +9,5 @@ export interface ButtonProps {
   url?: string;
   onClick?: () => void;
   className?: string;
+  removeBorders?: BorderSide[];
 }

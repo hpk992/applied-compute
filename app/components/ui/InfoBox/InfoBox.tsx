@@ -2,10 +2,12 @@ import { InfoBoxProps } from './InfoBox.types';
 
 export default function InfoBox({ subheading, heading, children, className = '' }: InfoBoxProps) {
   return (
-    <div className={`bg-background-100 flex w-full flex-col gap-16 p-24 ${className}`}>
-      <p className="text-primary text-sm">{subheading}</p>
-      <h2 className="text-foreground-main text-2xl font-bold">{heading}</h2>
-      <div className="text-foreground gap-16">{children}</div>
+    <div className={`flex w-full flex-col gap-16 bg-[#FAFAF9] p-24 max-sm:p-8 ${className}`}>
+      <p className="text-primary font-second text-[12px] font-bold">{subheading}</p>
+      <h2 className="text-foreground text-[39px] leading-[45px] font-semibold max-sm:text-[34px]">
+        {heading}
+      </h2>
+      <div className="flex flex-col">{children}</div>
     </div>
   );
 }
