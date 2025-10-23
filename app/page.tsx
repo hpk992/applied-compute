@@ -84,12 +84,12 @@ export default function Home() {
             heading="Agent workforces are coming; this is now a fact."
           >
             <div className="flex flex-col gap-16">
-              <p className="font-medium">
+              <p className="text-foreground-100 font-medium">
                 The same way companies today compete by having the best human workforce, companies
                 building for the future will compete by having the best agent workforce supporting
                 their human bosses.
               </p>
-              <div className="flex flex-col gap-6">
+              <div className="text-foreground-100 flex flex-col gap-6">
                 <p>
                   Like human top performers, agent top performers must be intelligent, dedicated,
                   and the best in the world at what they do. And like elite employees, they are
@@ -213,7 +213,9 @@ export default function Home() {
             heading="Ambiguity, setbacks, and obstacles don’t shake us. It’s to be expected when pioneering."
           >
             <div className="flex flex-col gap-16">
-              <p>We’re currently hiring for our office in San Francisco.</p>
+              <p className="text-foreground-100">
+                We’re currently hiring for our office in San Francisco.
+              </p>
               <Button type="inverted" icon="default" text="View open roles (06)" />
             </div>
           </InfoBox>
