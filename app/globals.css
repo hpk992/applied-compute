@@ -1,61 +1,49 @@
 @import 'tailwindcss';
 
-/* Suisse Works Font Family */
+/* Suisse Intl Font Family */
 @font-face {
-  font-family: 'Suisse Works';
-  src:
-    url('/font/Suisse-Works/SuisseWorks-Regular-WebXL.woff2') format('woff2'),
-    url('/font/Suisse-Works/SuisseWorks-Regular-WebXL.woff') format('woff');
+  font-family: 'Suisse Intl';
+  src: url('/font/Suisse-Intl/SuisseIntl-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Suisse Works';
-  src:
-    url('/font/Suisse-Works/SuisseWorks-RegularItalic-WebXL.woff2') format('woff2'),
-    url('/font/Suisse-Works/SuisseWorks-RegularItalic-WebXL.woff') format('woff');
+  font-family: 'Suisse Intl';
+  src: url('/font/Suisse-Intl/SuisseIntl-RegularIt.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Suisse Works';
-  src:
-    url('/font/Suisse-Works/SuisseWorks-Medium-WebXL.woff2') format('woff2'),
-    url('/font/Suisse-Works/SuisseWorks-Medium-WebXL.woff') format('woff');
+  font-family: 'Suisse Intl';
+  src: url('/font/Suisse-Intl/SuisseIntl-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Suisse Works';
-  src:
-    url('/font/Suisse-Works/SuisseWorks-MediumItalic-WebXL.woff2') format('woff2'),
-    url('/font/Suisse-Works/SuisseWorks-MediumItalic-WebXL.woff') format('woff');
+  font-family: 'Suisse Intl';
+  src: url('/font/Suisse-Intl/SuisseIntl-MediumIt.woff2') format('woff2');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Suisse Works';
-  src:
-    url('/font/Suisse-Works/SuisseWorks-Bold-WebXL.woff2') format('woff2'),
-    url('/font/Suisse-Works/SuisseWorks-Bold-WebXL.woff') format('woff');
+  font-family: 'Suisse Intl';
+  src: url('/font/Suisse-Intl/SuisseIntl-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Suisse Works';
-  src:
-    url('/font/Suisse-Works/SuisseWorks-BoldItalic-WebXL.woff2') format('woff2'),
-    url('/font/Suisse-Works/SuisseWorks-BoldItalic-WebXL.woff') format('woff');
+  font-family: 'Suisse Intl';
+  src: url('/font/Suisse-Intl/SuisseIntl-BoldIt.woff2') format('woff2');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -115,12 +103,12 @@
   --color-foreground-main: var(--foreground-main);
   --color-foreground-100: var(--foreground-100);
   --color-foreground-200: var(--foreground-200);
-  --font-main: 'Suisse Works';
+  --font-main: 'Suisse Intl';
   --font-second: 'Suisse Intl Mono';
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Suisse Works', serif;
+  font-family: 'Suisse Intl', serif;
 }
