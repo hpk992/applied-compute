@@ -254,7 +254,7 @@ export default function Home() {
                   If this mission speaks to you, you should speak with us.
                 </p>
               </div>
-              <Button type="primary" icon="default" text="Get in touch" />
+              <Button type="primaryHover" icon="default" text="Get in touch" />
             </div>
           </InfoBox>
 
@@ -334,20 +334,20 @@ export default function Home() {
           {/* Footer navigation links */}
           <div className="flex flex-row">
             <Button
-              type="inverted"
+              type="invertedHover"
               icon="none"
               text="Privacy Policy"
               className="border-background-200! flex-none"
             />
             <Button
-              type="inverted"
+              type="invertedHover"
               icon="none"
               text="Terms"
               removeBorders={['left']}
               className="border-background-200!"
             />
             <Button
-              type="inverted"
+              type="invertedHover"
               icon="default"
               text="Get in touch"
               removeBorders={['left']}

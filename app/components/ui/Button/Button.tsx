@@ -72,6 +72,10 @@ export default function Button({
     primary: 'bg-background text-primary border-primary hover:opacity-90 focus:ring-primary',
     inverted:
       'bg-primary text-background border-primary hover:bg-primary hover:text-background focus:ring-primary',
+    primaryHover:
+      'bg-background text-primary border-primary focus:ring-primary hover:bg-primary hover:text-background',
+    invertedHover:
+      'bg-primary text-background border-primary hover:bg-background hover:text-primary focus:ring-primary',
   };
 
   // Combine all style classes

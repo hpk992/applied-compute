@@ -5,7 +5,7 @@
  */
 
 /** Button visual style variants */
-export type ButtonType = 'primary' | 'inverted';
+export type ButtonType = 'primary' | 'inverted' | 'primaryHover' | 'invertedHover';
 
 /** Icon display options for the button */
 export type ButtonIcon = 'default' | 'none';
