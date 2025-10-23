@@ -30,18 +30,18 @@ import LoadingOverlay from '@/app/components/LoadingOverlay';
 const teamMembers = [
   {
     name: 'Yash Patil',
-    title: 'Founder',
-    background: 'Ex OpenAI Codex Researcher',
+    title: 'Co-Founder, CEO',
+    background: 'Ex-OpenAI Codex SWE Agent Researcher',
   },
   {
     name: 'Rhythm Garg',
-    title: 'Founder',
-    background: 'Ex OpenAI Codex Researcher',
+    title: 'Co-Founder, CTO',
+    background: 'Ex-OpenAI Reinforcement Learning Researcher',
   },
   {
     name: 'Linden Li',
-    title: 'Founder',
-    background: 'Ex OpenAI Codex Researcher',
+    title: 'Co-Founder, Chief Architect',
+    background: 'Ex-OpenAI Systems and Infra Researcher',
   },
 ];
 

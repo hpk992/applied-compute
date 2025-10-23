@@ -45,7 +45,7 @@ export default function ProfileCard({
 
   return (
     <div className={`flex items-center justify-between p-6 ${borderClasses} ${className}`}>
-      <div className="flex flex-row">
+      <div className="flex flex-row gap-4">
         {/* Name and title section - fixed width for alignment */}
         <div className="flex w-40 flex-col">
           <h3 className="text-foreground-100 font-second text-sm font-bold">{name}</h3>
@@ -54,7 +54,7 @@ export default function ProfileCard({
 
         {/* Background/experience section */}
         <div className="text-sm">
-          <span className="text-foreground-200 font-second text-[12px] font-bold">Background:</span>
+          <span className="text-foreground-200 font-second text-[12px] font-bold">Background</span>
           <br />
           <span className="text-foreground-200 font-second text-[12px] font-normal">
             {background}
