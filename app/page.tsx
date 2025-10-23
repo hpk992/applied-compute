@@ -18,6 +18,7 @@ import Button from '@/app/components/ui/Button';
 import InfoBox from '@/app/components/ui/InfoBox';
 import ProfileCard from '@/app/components/ui/ProfileCard';
 import LoadingOverlay from '@/app/components/LoadingOverlay';
+import DynamicHeader from '@/app/components/DynamicHeader';
 
 // ============================================================================
 // DATA
@@ -58,67 +59,16 @@ export default function Home() {
       <LoadingOverlay />
 
       {/* ================================================================== */}
-      {/* MOBILE FIXED HEADER LOGO                                          */}
-      {/* Only visible on mobile (<640px), fixed at top during scroll       */}
+      {/* DYNAMIC HEADER                                                     */}
+      {/* Auto-hiding header that appears/disappears based on scroll        */}
       {/* ================================================================== */}
-      <div className="bg-background fixed top-0 z-10 w-full pt-16 sm:hidden">
-        <Image
-          className="bg-background w-full px-4"
-          src="/logo-Applied-Compute.png"
-          alt="Applied Compute Logo"
-          width={300}
-          height={49}
-        />
-      </div>
-
-      {/* ================================================================== */}
-      {/* HEADER                                                             */}
-      {/* Mobile logo + desktop/mobile navigation buttons                   */}
-      {/* ================================================================== */}
-      <header>
-        {/* Mobile logo (static, at top of page) */}
-        <Image
-          className="bg-background mt-16 w-full px-4 sm:hidden"
-          src="/logo-Applied-Compute.png"
-          alt="Applied Compute Logo"
-          width={300}
-          height={49}
-        />
-
-        {/* Navigation buttons - Desktop layout (hidden on mobile) */}
-        <div className="flex w-full justify-end max-sm:px-4 sm:p-4">
-          <Button type="primary" icon="default" text="Join us" className="max-sm:hidden" />
-          <Button
-            type="primary"
-            icon="default"
-            text="Get in touch"
-            className="max-sm:hidden"
-            removeBorders={['left']}
-          />
-
-          {/* Navigation buttons - Mobile layout (hidden on desktop) */}
-          <Button
-            type="primary"
-            icon="default"
-            text="Join us"
-            className="w-full sm:hidden"
-            removeBorders={['top']}
-          />
-          <Button
-            type="primary"
-            icon="default"
-            text="Get in touch"
-            removeBorders={['left', 'top']}
-            className="w-full sm:hidden"
-          />
-        </div>
-      </header>
+      <DynamicHeader />
 
       {/* ================================================================== */}
       {/* MAIN CONTENT                                                       */}
       {/* Two-column layout: sidebar (logo) + content (InfoBox sections)    */}
       {/* ================================================================== */}
-      <main className="flex flex-row pt-24 pr-[135px] pb-[112px] max-[1228px]:pr-4 max-[1228px]:pl-4 min-[1800]:pr-[20vw]">
+      <main className="flex flex-row pt-24 pr-[135px] pb-28 max-[1228px]:pr-4 max-[1228px]:pl-4 max-sm:pt-56 min-[1800]:pr-[20vw]">
         {/* ---------------------------------------------------------------- */}
         {/* SIDEBAR - Desktop logo (fixed at bottom-left)                   */}
         {/* ---------------------------------------------------------------- */}
