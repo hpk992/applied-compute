@@ -56,8 +56,8 @@ export default function LoadingOverlay() {
             width={226}
             height={47}
             style={{
-              left: hasStarted ? '-1px' : '100%',
-              transition: 'left 1s linear',
+              left: hasStarted ? '-1px' : 'calc(100% - 226px)',
+              transition: 'left 2.5s cubic-bezier(0.19, 1, 0.22, 1) 0.5s',
               willChange: 'left',
             }}
           />
