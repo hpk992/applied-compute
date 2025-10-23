@@ -45,9 +45,9 @@ export default function ProfileCard({
 
   return (
     <div className={`flex items-center justify-between p-6 ${borderClasses} ${className}`}>
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-4 max-sm:w-full max-sm:flex-col">
         {/* Name and title section - fixed width for alignment */}
-        <div className="flex w-40 flex-col">
+        <div className="flex w-40 flex-col max-sm:w-full">
           <h3 className="text-foreground-100 font-second text-sm font-bold">{name}</h3>
           <p className="text-foreground-100 font-second text-sm">{title}</p>
         </div>
