@@ -135,12 +135,17 @@ export default function Home() {
         {/* ---------------------------------------------------------------- */}
         {/* CONTENT SECTIONS                                                 */}
         {/* ---------------------------------------------------------------- */}
+        {/* ============================================================== */}
+        {/* SECTION 1: Company Mission & Vision                            */}
+        {/* ============================================================== */}
         <section className="flex w-full max-w-[755px] flex-none flex-col gap-3">
-          {/* ============================================================== */}
-          {/* SECTION 1: Company Mission & Vision                            */}
-          {/* ============================================================== */}
           <InfoBox
-            subheading="The Office of Applied Compute® • 25th October, 2025"
+            subheading={
+              <>
+                <span className="max-sm:hidden">The Office of </span>
+                Applied Compute® • 25th October, 2025
+              </>
+            }
             heading="Agent workforces are coming; this is now a fact."
           >
             <div className="flex flex-col gap-16">

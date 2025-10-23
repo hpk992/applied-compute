@@ -8,7 +8,7 @@
 /**
  * Props for the InfoBox component
  *
- * @property {string} subheading - Small label text displayed above heading (orange, uppercase)
+ * @property {React.ReactNode} subheading - Small label text displayed above heading (orange, uppercase) - can be string or JSX for responsive text
  * @property {string} heading - Main heading text (large, bold)
  * @property {React.ReactNode} children - Content area (paragraphs, lists, buttons, etc.)
  * @property {string} className - Optional additional Tailwind CSS classes
@@ -20,9 +20,23 @@
  * >
  *   <p>Content goes here...</p>
  * </InfoBox>
+ *
+ * @example
+ * // Responsive subheading
+ * <InfoBox
+ *   subheading={
+ *     <>
+ *       <span className="max-sm:hidden">The Office of </span>
+ *       Applied Compute® • 25th October, 2025
+ *     </>
+ *   }
+ *   heading="Agent workforces are coming"
+ * >
+ *   <p>Content...</p>
+ * </InfoBox>
  */
 export interface InfoBoxProps {
-  subheading: string;
+  subheading: React.ReactNode;
   heading: string;
   children: React.ReactNode;
   className?: string;
