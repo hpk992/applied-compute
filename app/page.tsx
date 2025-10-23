@@ -1,9 +1,32 @@
+/**
+ * Home Page
+ *
+ * Main landing page for Applied Compute showcasing:
+ * - Company mission and vision
+ * - Team member profiles
+ * - Career opportunities
+ *
+ * Structure:
+ * 1. Loading overlay animation
+ * 2. Fixed header with navigation
+ * 3. Main content with InfoBox sections
+ * 4. Footer with branding and contact
+ */
+
 import Image from 'next/image';
 import Button from '@/app/components/ui/Button';
 import InfoBox from '@/app/components/ui/InfoBox';
 import ProfileCard from '@/app/components/ui/ProfileCard';
 import LoadingOverlay from '@/app/components/LoadingOverlay';
 
+// ============================================================================
+// DATA
+// ============================================================================
+
+/**
+ * Team member data for profile cards
+ * Each member includes name, title, and background
+ */
 const teamMembers = [
   {
     name: 'Yash Patil',
@@ -22,10 +45,22 @@ const teamMembers = [
   },
 ];
 
+// ============================================================================
+// COMPONENT
+// ============================================================================
+
 export default function Home() {
   return (
     <div className="relative">
+      {/* ================================================================== */}
+      {/* LOADING OVERLAY                                                   */}
+      {/* ================================================================== */}
       <LoadingOverlay />
+
+      {/* ================================================================== */}
+      {/* MOBILE FIXED HEADER LOGO                                          */}
+      {/* Only visible on mobile (<640px), fixed at top during scroll       */}
+      {/* ================================================================== */}
       <div className="bg-background fixed top-0 z-10 w-full pt-16 sm:hidden">
         <Image
           className="bg-background w-full px-4"
@@ -35,7 +70,13 @@ export default function Home() {
           height={49}
         />
       </div>
+
+      {/* ================================================================== */}
+      {/* HEADER                                                             */}
+      {/* Mobile logo + desktop/mobile navigation buttons                   */}
+      {/* ================================================================== */}
       <header>
+        {/* Mobile logo (static, at top of page) */}
         <Image
           className="bg-background mt-16 w-full px-4 sm:hidden"
           src="/logo-Applied-Compute.png"
@@ -43,6 +84,8 @@ export default function Home() {
           width={300}
           height={49}
         />
+
+        {/* Navigation buttons - Desktop layout (hidden on mobile) */}
         <div className="flex w-full justify-end max-sm:px-4 sm:p-4">
           <Button type="primary" icon="default" text="Join us" className="max-sm:hidden" />
           <Button
@@ -52,6 +95,8 @@ export default function Home() {
             className="max-sm:hidden"
             removeBorders={['left']}
           />
+
+          {/* Navigation buttons - Mobile layout (hidden on desktop) */}
           <Button
             type="primary"
             icon="default"
@@ -68,7 +113,15 @@ export default function Home() {
           />
         </div>
       </header>
+
+      {/* ================================================================== */}
+      {/* MAIN CONTENT                                                       */}
+      {/* Two-column layout: sidebar (logo) + content (InfoBox sections)    */}
+      {/* ================================================================== */}
       <main className="flex flex-row pt-24 pr-[135px] pb-[112px] max-[1228px]:pr-4 max-[1228px]:pl-4 min-[1800]:pr-[20vw]">
+        {/* ---------------------------------------------------------------- */}
+        {/* SIDEBAR - Desktop logo (fixed at bottom-left)                   */}
+        {/* ---------------------------------------------------------------- */}
         <aside className="relative w-full max-sm:hidden">
           <Image
             className="bg-background fixed bottom-[17.5px] left-[17.5px]"
@@ -78,7 +131,14 @@ export default function Home() {
             height={49}
           />
         </aside>
+
+        {/* ---------------------------------------------------------------- */}
+        {/* CONTENT SECTIONS                                                 */}
+        {/* ---------------------------------------------------------------- */}
         <section className="flex w-full max-w-[755px] flex-none flex-col gap-3">
+          {/* ============================================================== */}
+          {/* SECTION 1: Company Mission & Vision                            */}
+          {/* ============================================================== */}
           <InfoBox
             subheading="The Office of Applied Compute® • 25th October, 2025"
             heading="Agent workforces are coming; this is now a fact."
@@ -192,6 +252,10 @@ export default function Home() {
               <Button type="primary" icon="default" text="Get in touch" />
             </div>
           </InfoBox>
+
+          {/* ============================================================== */}
+          {/* SECTION 2: Team Profiles                                       */}
+          {/* ============================================================== */}
           <InfoBox
             subheading="Our Team"
             heading="We're a close-knit team of researchers and builders redefining the future of AI engineering."
@@ -208,9 +272,13 @@ export default function Home() {
               ))}
             </div>
           </InfoBox>
+
+          {/* ============================================================== */}
+          {/* SECTION 3: Careers                                             */}
+          {/* ============================================================== */}
           <InfoBox
             subheading="Careers"
-            heading="Ambiguity, setbacks, and obstacles don’t shake us. It’s to be expected when pioneering."
+            heading="Ambiguity, setbacks, and obstacles don't shake us. It's to be expected when pioneering."
           >
             <div className="flex flex-col gap-16">
               <p className="text-foreground-100">
@@ -221,8 +289,14 @@ export default function Home() {
           </InfoBox>
         </section>
       </main>
+
+      {/* ================================================================== */}
+      {/* FOOTER                                                             */}
+      {/* Full-width orange section with logo, company info, and links      */}
+      {/* ================================================================== */}
       <footer className="bg-primary relative z-20 h-full min-h-screen w-full py-[66px] pr-[135px] max-[1228px]:px-4">
         <div className="ml-auto flex max-w-[755px] flex-col gap-16">
+          {/* Applied Compute logo SVG */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="755"
@@ -236,6 +310,8 @@ export default function Home() {
               fill="#E7E5E4"
             />
           </svg>
+
+          {/* Company name and tagline */}
           <div className="flex flex-col gap-5 max-sm:mb-72">
             <div>
               <p className="text-background-100 text-center text-[28px] font-semibold">
@@ -249,6 +325,8 @@ export default function Home() {
               Bespoke A.I. for business
             </p>
           </div>
+
+          {/* Footer navigation links */}
           <div className="flex flex-row">
             <Button
               type="inverted"
