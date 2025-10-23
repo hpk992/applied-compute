@@ -112,3 +112,9 @@ body {
   color: var(--foreground);
   font-family: 'Suisse Intl', serif;
 }
+
+/* Prevent scrolling during loading overlay */
+body.loading-no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}

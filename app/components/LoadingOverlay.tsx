@@ -34,6 +34,9 @@ export default function LoadingOverlay() {
   const [hasStarted, setHasStarted] = useState(false); // Triggers logo animation
 
   useEffect(() => {
+    // Prevent scrolling while loading overlay is active
+    document.body.classList.add('loading-no-scroll');
+
     // Trigger logo movement shortly after component mounts
     // requestAnimationFrame ensures browser is ready for smooth animation
     requestAnimationFrame(() => {
@@ -56,8 +59,16 @@ export default function LoadingOverlay() {
     return () => {
       clearTimeout(fadeTimer);
       clearTimeout(removeTimer);
+      document.body.classList.remove('loading-no-scroll');
     };
   }, []);
+
+  // Remove scroll prevention when component becomes invisible
+  useEffect(() => {
+    if (!isVisible) {
+      document.body.classList.remove('loading-no-scroll');
+    }
+  }, [isVisible]);
 
   // Don't render anything once overlay is complete
   if (!isVisible) return null;
