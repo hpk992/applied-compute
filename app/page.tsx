@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Button from '@/app/components/ui/Button';
 import InfoBox from '@/app/components/ui/InfoBox';
 import ProfileCard from '@/app/components/ui/ProfileCard';
+import LoadingOverlay from '@/app/components/LoadingOverlay';
 
 const teamMembers = [
   {
@@ -24,6 +25,7 @@ const teamMembers = [
 export default function Home() {
   return (
     <div className="relative">
+      <LoadingOverlay />
       <div className="bg-background fixed top-0 z-10 w-full pt-16 sm:hidden">
         <Image
           className="bg-background w-full px-4"
@@ -232,7 +234,7 @@ export default function Home() {
               fill="#E7E5E4"
             />
           </svg>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 max-sm:mb-72">
             <div>
               <p className="text-background-100 text-center text-[28px] font-semibold">
                 Applied Compute
@@ -241,7 +243,7 @@ export default function Home() {
                 San Francisco, CA, U.S.A.
               </p>
             </div>
-            <p className="text-background-100 text-center text-base font-normal max-sm:mb-72">
+            <p className="text-background-100 text-center text-base font-normal">
               Bespoke A.I. for business
             </p>
           </div>
