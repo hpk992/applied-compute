@@ -80,11 +80,11 @@ export default function DynamicHeader() {
 
       {/* ================================================================== */}
       {/* MOBILE FIXED HEADER                                                */}
-      {/* Always visible on mobile, only buttons slide up/down               */}
+      {/* Always visible on mobile, only buttons collapse/expand             */}
       {/* ================================================================== */}
-      <header className="fixed top-0 z-20 w-full sm:hidden">
+      <header className="bg-background fixed top-0 z-20 w-full sm:hidden">
         {/* Mobile logo - always visible */}
-        <div className="bg-background relative z-30 pt-16">
+        <div className="pt-16">
           <Image
             className="bg-background w-full px-4"
             src="/logo-Applied-Compute.png"
@@ -94,10 +94,10 @@ export default function DynamicHeader() {
           />
         </div>
 
-        {/* Mobile navigation buttons - slide up/down with background */}
+        {/* Mobile navigation buttons - collapse/expand height */}
         <div
-          className={`bg-background relative z-20 w-full px-4 transition-transform duration-300 ease-in-out ${
-            isVisible ? 'translate-y-0' : '-translate-y-full'
+          className={`w-full overflow-hidden px-4 transition-all duration-300 ease-in-out ${
+            isVisible ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
           <div className="flex w-full">

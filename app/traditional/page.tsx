@@ -99,11 +99,11 @@ export default function Home() {
       {/* <LoadingOverlay /> */}
 
       {/* ================================================================== */}
-      {/* DYNAMIC TRADITIONAL HEADER                                         */}
-      {/* Logo on left, navigation on right, hides/shows on scroll          */}
+      {/* DESKTOP FIXED HEADER                                               */}
+      {/* Only visible on desktop (≥640px), shows navigation buttons        */}
       {/* ================================================================== */}
       <header
-        className={`bg-background fixed top-0 z-20 w-full transition-transform duration-300 ease-in-out ${
+        className={`bg-background fixed top-0 z-20 hidden w-full transition-transform duration-300 ease-in-out sm:block ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
@@ -118,28 +118,51 @@ export default function Home() {
           />
 
           {/* Navigation buttons on the right - Desktop */}
-          <div className="hidden sm:flex">
+          <div className="flex">
             <Button type="primary" icon="default" text="Join us" />
             <Button type="primary" icon="default" text="Get in touch" removeBorders={['left']} />
           </div>
         </div>
+      </header>
 
-        {/* Mobile navigation buttons - full width */}
-        <div className="flex w-full px-4 sm:hidden">
-          <Button
-            type="primary"
-            icon="default"
-            text="Join us"
-            className="w-full"
-            removeBorders={['top']}
+      {/* ================================================================== */}
+      {/* MOBILE FIXED HEADER                                                */}
+      {/* Always visible on mobile, only buttons collapse/expand             */}
+      {/* ================================================================== */}
+      <header className="bg-background fixed top-0 z-20 w-full sm:hidden">
+        {/* Mobile logo - always visible */}
+        <div className="pt-16">
+          <Image
+            className="bg-background w-full px-4"
+            src="/logo-Applied-Compute.png"
+            alt="Applied Compute Logo"
+            width={300}
+            height={49}
           />
-          <Button
-            type="primary"
-            icon="default"
-            text="Get in touch"
-            removeBorders={['left', 'top']}
-            className="w-full"
-          />
+        </div>
+
+        {/* Mobile navigation buttons - collapse/expand height */}
+        <div
+          className={`w-full overflow-hidden px-4 transition-all duration-300 ease-in-out ${
+            isVisible ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="flex w-full">
+            <Button
+              type="primary"
+              icon="default"
+              text="Join us"
+              className="w-full"
+              removeBorders={['top']}
+            />
+            <Button
+              type="primary"
+              icon="default"
+              text="Get in touch"
+              removeBorders={['left', 'top']}
+              className="w-full"
+            />
+          </div>
         </div>
       </header>
 
@@ -147,7 +170,7 @@ export default function Home() {
       {/* MAIN CONTENT                                                       */}
       {/* Centered single-column layout                                      */}
       {/* ================================================================== */}
-      <main className="flex justify-center px-4 pt-32 pb-28 max-[1228px]:px-8 sm:pt-24">
+      <main className="flex justify-center px-4 pt-24 pb-28 max-[1228px]:px-8 max-sm:pt-56 sm:pt-24">
         {/* ---------------------------------------------------------------- */}
         {/* CENTERED CONTENT SECTIONS                                        */}
         {/* ---------------------------------------------------------------- */}
