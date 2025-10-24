@@ -57,7 +57,7 @@ export default function Button({
 }: ButtonProps) {
   // Base styles - Core layout and interaction styles
   const baseStyles =
-    'font-main flex px-3 py-3 justify-between items-center gap-2.5 font-medium transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer';
+    'font-main flex px-3 py-3 justify-between items-center gap-2.5 font-medium transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer relative hover:z-10 focus:z-10 active:z-10';
 
   // Build border classes dynamically based on removeBorders prop
   // Only adds border for sides NOT included in the removeBorders array
@@ -66,6 +66,17 @@ export default function Button({
   if (!removeBorders.includes('right')) borderClasses.push('border-r-[2px]');
   if (!removeBorders.includes('bottom')) borderClasses.push('border-b-[2px]');
   if (!removeBorders.includes('left')) borderClasses.push('border-l-[2px]');
+
+  // Add conditional borders that appear on interactive states for removed borders
+  const conditionalBorders = [];
+  if (removeBorders.includes('top'))
+    conditionalBorders.push('hover:border-t-[2px] focus:border-t-[2px] active:border-t-[2px]');
+  if (removeBorders.includes('right'))
+    conditionalBorders.push('hover:border-r-[2px] focus:border-r-[2px] active:border-r-[2px]');
+  if (removeBorders.includes('bottom'))
+    conditionalBorders.push('hover:border-b-[2px] focus:border-b-[2px] active:border-b-[2px]');
+  if (removeBorders.includes('left'))
+    conditionalBorders.push('hover:border-l-[2px] focus:border-l-[2px] active:border-l-[2px]');
 
   // Type-specific styles for different button variants
   const typeStyles = {
@@ -79,7 +90,7 @@ export default function Button({
   };
 
   // Combine all style classes
-  const buttonStyles = `${baseStyles} ${borderClasses.join(' ')} ${typeStyles[type]} ${className}`;
+  const buttonStyles = `${baseStyles} ${borderClasses.join(' ')} ${conditionalBorders.join(' ')} ${typeStyles[type]} ${className}`;
 
   // Button content structure
   const content = (
