@@ -113,6 +113,18 @@ body {
   font-family: 'Suisse Intl', serif;
 }
 
+/* Prevent over-scrolling on desktop */
+@media (min-width: 640px) {
+  html {
+    overscroll-behavior: none;
+  }
+
+  body {
+    overscroll-behavior: none;
+    overflow-x: hidden;
+  }
+}
+
 /* Prevent scrolling during loading overlay */
 body.loading-no-scroll {
   overflow: hidden;
