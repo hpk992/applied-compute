@@ -40,13 +40,12 @@ export default function Button({
     'font-main flex px-3 py-3 justify-between items-center gap-2.5 font-medium transition-all duration-200 ease-in-out cursor-pointer relative border-2 border-r-0 last:border-r-2 ';
 
   const typeStyles = {
-    primary: 'bg-background text-primary border-primary hover:opacity-90 focus:ring-primary',
-    inverted:
-      'bg-primary text-background border-primary hover:bg-primary hover:text-background focus:ring-primary',
+    primary: 'bg-background text-primary border-primary',
+    inverted: 'bg-primary text-background border-primary hover:bg-primary hover:text-background',
     primaryHover:
-      'bg-background text-primary border-primary focus:ring-primary hover:bg-primary hover:text-background hover:ring-2 hover:ring-inset',
+      'bg-background text-primary border-primary hover:bg-primary hover:text-background hover:ring-2 hover:ring-inset active:ring-0',
     invertedHover:
-      'bg-primary text-background border-primary hover:bg-background hover:text-primary focus:ring-primary hover:ring-2 hover:ring-inset',
+      'bg-primary text-background border-primary hover:bg-background hover:text-primary hover:ring-primary hover:ring-2 hover:ring-inset active:ring-0',
   };
 
   const buttonStyles = `${baseStyles} ${typeStyles[type]} ${className}`;
