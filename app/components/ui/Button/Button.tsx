@@ -45,7 +45,7 @@ export default function Button({
     primaryHover:
       'bg-background text-primary border-primary hover:bg-primary hover:text-background hover:ring-2 hover:ring-inset active:ring-0',
     invertedHover:
-      'bg-primary text-background border-primary hover:bg-background hover:text-primary hover:ring-primary hover:ring-2 hover:ring-inset active:ring-0',
+      'bg-primary text-background border-background-200 hover:bg-background hover:text-primary hover:ring-primary hover:ring-2 hover:ring-inset active:ring-0',
   };
 
   const buttonStyles = `${baseStyles} ${typeStyles[type]} ${className}`;

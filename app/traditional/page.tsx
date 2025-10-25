@@ -328,7 +328,7 @@ export default function Home() {
               <p className="text-foreground-100">
                 We’re currently hiring for our office in San Francisco.
               </p>
-              <Button type="inverted" icon="default" text="View open roles (06)" />
+              <Button type="invertedHover" icon="default" text="View open roles (06)" />
             </div>
           </InfoBox>
         </section>
