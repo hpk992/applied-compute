@@ -48,12 +48,12 @@ export default function LoadingOverlay() {
     // Begin fade-out after 3 seconds
     const fadeTimer = setTimeout(() => {
       setOpacity(0);
-    }, 3000);
+    }, 2000);
 
     // Remove component from DOM after fade completes
     const removeTimer = setTimeout(() => {
       setIsVisible(false);
-    }, 3300); // 3000ms display + 300ms fade
+    }, 2000); // 3000ms display + 300ms fade
 
     // Cleanup timers on unmount
     return () => {
@@ -101,7 +101,7 @@ export default function LoadingOverlay() {
               // Starts at right edge, moves to left edge
               left: hasStarted ? '-1px' : 'calc(100% - 226px)',
               // 2.5s duration, expo-out easing, 0.5s delay
-              transition: 'left 2.5s cubic-bezier(0.19, 1, 0.22, 1) 0.5s',
+              transition: 'left 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0.5s',
               // Performance hint for browser
               willChange: 'left',
             }}

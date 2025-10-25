@@ -73,8 +73,8 @@ export default function DynamicHeader() {
         }`}
       >
         <div className="flex w-full justify-end p-4">
-          <Button type="primary" icon="default" text="Join us" />
-          <Button type="primary" icon="default" text="Get in touch" removeBorders={['left']} />
+          <Button type="primaryHover" icon="default" text="Join us" />
+          <Button type="primaryHover" icon="default" text="Get in touch" removeBorders={['left']} />
         </div>
       </header>
 
